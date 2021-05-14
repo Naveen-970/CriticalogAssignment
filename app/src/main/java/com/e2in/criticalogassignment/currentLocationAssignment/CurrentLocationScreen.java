@@ -79,10 +79,8 @@ public class CurrentLocationScreen extends AppCompatActivity {
         locationCallback = new LocationCallback() {
             @Override
             public void onLocationResult(LocationResult locationResult) {
-
                 currentLocation = locationResult.getLocations().get(0);
                 getAddress();
-
             }
         };
         startLocationUpdates();
