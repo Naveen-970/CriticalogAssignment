@@ -107,7 +107,7 @@ public class CurrentLocationScreen extends AppCompatActivity {
             else {
                 LocationRequest locationRequest = new LocationRequest();
                 locationRequest.setInterval(2000);
-                locationRequest.setFastestInterval(2000);
+                locationRequest.setFastestInterval(60000*10);
                 locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
                 if (checkGpsStatus()){
                     fusedLocationClient.requestLocationUpdates(locationRequest, locationCallback, null);
